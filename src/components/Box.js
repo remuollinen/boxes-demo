@@ -1,5 +1,3 @@
-import "./App.css";
-
 const Box = (props) => {
 	return (
 		<div className="box">

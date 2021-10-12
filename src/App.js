@@ -1,20 +1,14 @@
 import "./App.css";
-import Box from "./Box";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Main from "./components/Main";
 
 function App() {
 	return (
 		<div className="App">
-			<header>
-				<h1>Logo</h1>
-			</header>
-			<main>
-				<Box name="Maria" title="CEO" age="29" />
-				<Box name="Kati" title="Developer" age="25" />
-				<Box name="Katrin" title="Designer" age="45" />
-			</main>
-			<footer>
-				<p>Copyrights</p>
-			</footer>
+			<Header />
+			<Main />
+			<Footer />
 		</div>
 	);
 }
