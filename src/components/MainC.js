@@ -17,14 +17,9 @@ class MainC extends Component {
 	render() {
 		return (
 			<main>
-				<button onClick={this.changeNameHandler}>Click me!</button>
-				<ul>
-					{this.state.persons.map((person) => (
-						<li>
-							{person.name} is {person.age} old and is a {person.title}
-						</li>
-					))}
-				</ul>
+				{this.state.persons.map((person) => (
+					<Box name={person.name} age={person.age} title={person.title} />
+				))}
 			</main>
 		);
 	}
