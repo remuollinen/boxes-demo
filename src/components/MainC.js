@@ -4,9 +4,9 @@ import Box from "./Box";
 class MainC extends Component {
 	state = {
 		persons: [
-			{ name: "Maria", age: 29, title: "CEO" },
-			{ name: "Kati", age: 25, title: "Developer" },
-			{ name: "Leila", age: 45, title: "Designer" },
+			{ id: 1, name: "Maria", age: 29, title: "CEO" },
+			{ id: 2, name: "Kati", age: 25, title: "Developer" },
+			{ id: 3, name: "Leila", age: 45, title: "Designer" },
 		],
 	};
 
@@ -18,7 +18,12 @@ class MainC extends Component {
 		return (
 			<main>
 				{this.state.persons.map((person) => (
-					<Box name={person.name} age={person.age} title={person.title} />
+					<Box
+						key={person.id}
+						name={person.name}
+						age={person.age}
+						title={person.title}
+					/>
 				))}
 			</main>
 		);
