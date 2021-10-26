@@ -17,27 +17,14 @@ class MainC extends Component {
 	render() {
 		return (
 			<main>
-				<Box
-					name={this.state.persons[0].name}
-					title={this.state.persons[0].title}
-					age={this.state.persons[0].age}
-				/>
-				<Box
-					name={this.state.persons[1].name}
-					title={this.state.persons[1].title}
-					age={this.state.persons[1].age}
-				/>
-				<Box
-					name={this.state.persons[2].name}
-					title={this.state.persons[2].title}
-					age={this.state.persons[2].age}
-				/>
-				{/* {this.state.persons.map((person) => {
-						return (
-							<Box name={person.name} title={person.title} age={person.age} />
-						);
-					})} */}
 				<button onClick={this.changeNameHandler}>Click me!</button>
+				<ul>
+					{this.state.persons.map((person) => (
+						<li>
+							{person.name} is {person.age} old and is a {person.title}
+						</li>
+					))}
+				</ul>
 			</main>
 		);
 	}
