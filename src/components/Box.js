@@ -1,3 +1,4 @@
+import React from "react";
 const Box = (props) => {
 	const changeNameHandler = () => {
 		console.log("WOW from box");
